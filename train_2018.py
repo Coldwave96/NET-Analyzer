@@ -3,7 +3,7 @@ from tqdm import tqdm
 
 import utils
 
-# folder_path = "Datasets/CIC-IDS2017"
+# folder_path = "Datasets/CIC-IDS2018"
 folder_path = "Datasets/test"
 label_str = "Label"
 
@@ -13,13 +13,7 @@ combined_df, inverted_mapping = utils.encode_labels(combined_df, label_str)
 
 combined_df.drop(['Bwd PSH Flags'], axis=1, inplace=True)
 combined_df.drop(['Bwd URG Flags'], axis=1, inplace=True)
-combined_df.drop(['Fwd Avg Bytes/Bulk'], axis=1, inplace=True)
-combined_df.drop(['Fwd Avg Packets/Bulk'], axis=1, inplace=True)
-combined_df.drop(['Fwd Avg Bulk Rate'], axis=1, inplace=True)
-combined_df.drop(['Bwd Avg Bytes/Bulk'], axis=1, inplace=True)
-combined_df.drop(['Bwd Avg Packets/Bulk'], axis=1, inplace=True)
-combined_df.drop(['Bwd Avg Bulk Rate'], axis=1, inplace=True)
-combined_df.drop(['Flow Bytes/s', 'Flow Packets/s'], axis=1, inplace=True)
+combined_df.drop(['Timestamp'], axis=1, inplace=True)
 
 print("[*] Datasets Info")
 print(label_counts)
