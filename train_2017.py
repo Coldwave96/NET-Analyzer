@@ -3,8 +3,8 @@ from tqdm import tqdm
 
 import utils
 
-# folder_path = "Datasets/CIC-IDS2017"
-folder_path = "Datasets/test"
+folder_path = "Datasets/CIC-IDS2017"
+# folder_path = "Datasets/test"
 label_str = "Label"
 
 combined_df = utils.read_csv_files_from_folder(folder_path)
